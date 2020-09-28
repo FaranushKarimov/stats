@@ -44,3 +44,26 @@ func TestCategoriesAvg_multiple(t *testing.T) {
 	} 
   
   }
+
+
+  func TestPeriodsDynamic_positive(t *testing.T) {
+	first := map[types.Category]types.Money{
+	  "cafe": 20,
+	  "auto": 14,
+	}
+	second := map[types.Category]types.Money{
+	  "cafe": 35,
+	  "auto": 17,
+	}
+	want := map[types.Category]types.Money{
+	  "cafe": 15,
+	  "auto": 3,
+	}
+  
+	got := PeriodsDynamic(first, second)
+  
+	if !reflect.DeepEqual(want, got) {
+	  t.Errorf(" got > %v \n want > %v", got, want)
+	} 
+  
+  }
