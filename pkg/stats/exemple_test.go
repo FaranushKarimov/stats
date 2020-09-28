@@ -5,7 +5,7 @@ import (
 	"github.com/FaranushKarimov/bank/pkg/types"
 )
 
-func ExampleAvg() {
+func ExampleAvgUser() {
 	payments := []types.Payment{
 		{
 			ID:       2,
@@ -27,7 +27,7 @@ func ExampleAvg() {
 	//Output: 5200
 }
 
-func ExampleTotalInCategory() {
+func ExampleTotalInCategoryUser() {
 	payments := []types.Payment{
 		{
 			ID:       2,
